@@ -3,8 +3,14 @@ uvicorn
 
 #dbs
 sqlalchemy
-psycopg2
+#psycopg2
 psycopg2-binary
 
 #env vars
 python-dotenv
+
+#email validation
+pydantic[email]
+
+#hashing
+passlib[bcrypt]

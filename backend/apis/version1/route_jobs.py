@@ -9,7 +9,7 @@ from db.repository.jobs import create_new_job
 router = APIRouter()
 
 
-@router.post("/jobs", response_model=ShowJob)
+@router.post("/create-job", response_model=ShowJob)
 def create_job(job: JobCreate, db: Session = Depends(get_db)):
     """
     Create a new job

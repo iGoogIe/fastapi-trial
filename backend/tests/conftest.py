@@ -30,7 +30,7 @@ engine = create_engine(
 # Use connect_args parameter only with sqlite
 SessionTesting = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-
+# Use this to connect to db and fixture to use elsewhere by tests
 @pytest.fixture(scope="function")
 def app() -> Generator[FastAPI, Any, None]:
     """

@@ -22,3 +22,6 @@ pytest-cov==2.11.1
 
 #jwt tokens
 python-jose
+
+#for form data
+python-multipart

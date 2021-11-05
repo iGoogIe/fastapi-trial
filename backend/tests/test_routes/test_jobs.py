@@ -1,7 +1,7 @@
 import json 
 
 
-def test_create_job(client):
+def test_create_job(client, normal_user_token_headers):
     data = {
         "title" : "SDE 1 Yahoo",
         "company" : "testhoo",
@@ -11,7 +11,7 @@ def test_create_job(client):
         "date_posted": "2022-07-20" 
     }
 
-    response = client.post('/job/create-job', data=json.dumps(data))
+    response = client.post('/job/create-job', data=json.dumps(data), headers=normal_user_token_headers)
     assert response.status_code == 200
 
 def test_retrieve_job_by_id(client):
